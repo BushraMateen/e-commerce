@@ -3,6 +3,7 @@
 
 from product import product
 import json
+
 def loadfile():
 # Opening JSON file
     f = open('product.json',encoding='utf8')
