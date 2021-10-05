@@ -52,7 +52,7 @@ def add_product():
 
 
        
-	# close the communication with the PostgreSQL
+	
     
 
 
