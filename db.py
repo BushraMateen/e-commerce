@@ -49,34 +49,3 @@ def add_product():
     conn.commit()
     conn.close()
 
-
-
-       
-	
-    
-
-
-
-
-
-
-# cur.execute("""
-#     CREATE TABLE product(
-#     uniq_id integer PRIMARY KEY,
-#     product_name text,
-#     retail_price integer,
-#     discounted_price integer,
-#     description     text,
-#     product_rating  text,
-#     overall_rating  text,
-#     brand  text
-
-# )
-# """)
-
-# Check is the json object was loaded correctly
-# try:    
-#     print(decoded_data[0])
-#     #print(decoded_data[0])
-# except KeyError:
-    #print("Oops! JSON Data not loaded correctly using json.loads()")
