@@ -10,10 +10,11 @@ from webapp.serializers import productSerializer
 
 
 @csrf_exempt
-def productApi(request,uniq_id=0):
+def productApi(request,id="0"):
     if request.method == 'GET':
-        product = products.objects.all()
-        product_serializer = productSerializer(product,many=True)
+        #product = products.objects.all()
+        product = products.objects.get(id=int(id))
+        product_serializer = productSerializer(product,many=False)
         return JsonResponse(product_serializer.data,safe=False)
     elif request.method == 'POST':
         product_data=JSONParser().parse(request)
