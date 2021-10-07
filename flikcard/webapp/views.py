@@ -13,11 +13,8 @@ from webapp.serializers import productsSerializer
 def productApi(request,id="0"):
 
     product = products.objects.get(id=int(id))
-
-
     if request.method == 'GET':
         #product = products.objects.all()
-       
         product_serializer = productsSerializer(product,many=False)
         return JsonResponse(product_serializer.data,safe=False)
     elif request.method == 'POST':
@@ -25,8 +22,6 @@ def productApi(request,id="0"):
         product_serializer = productsSerializer(data=product_data)
         #print(product_serializer.errors)
         if product_serializer.is_valid():
-            #product_data = 
-            #product_serializer.validated_data
             product_serializer.save()
             return JsonResponse("Added succesfully",safe=False)
         return JsonResponse("failed to add",safe=False) 
@@ -35,8 +30,6 @@ def productApi(request,id="0"):
         product_serializer = productsSerializer(product,data=product_data)
         #print(product_serializer.errors)
         if product_serializer.is_valid():
-            #product_data = 
-            #product_serializer.validated_data
             product_serializer.save()
             return JsonResponse("updated succesfully",safe=False)
         return JsonResponse("failed to update",safe=False)               
