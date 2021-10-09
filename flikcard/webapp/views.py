@@ -10,9 +10,11 @@ from webapp.serializers import productsSerializer
 
 
 @csrf_exempt
-def productApi(request,id="0"):
+def productApi(request,id=0):
+    
 
     product = products.objects.get(id=int(id))
+    
     if request.method == 'GET':
         #product = products.objects.all()
         product_serializer = productsSerializer(product,many=False)
@@ -37,3 +39,11 @@ def productApi(request,id="0"):
             Product = products.objects.get(id=id)
             Product.delete()
             return JsonResponse("deleted successfully",safe=False)
+
+
+
+def productallApi(request,id=0):
+    if request.method == 'GET':
+        product = products.objects.all()
+        product_serializer = productsSerializer(product,many=True)
+        return JsonResponse(product_serializer.data,safe=False)
