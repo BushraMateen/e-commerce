@@ -1,0 +1,49 @@
+.header{
+    background-color: grey;
+    display:flex;
+    align-items: center;
+    position:sticky;
+    top:10px;
+    z-index: 100;
+
+}
+.header__search{ 
+    display: flex;
+    margin-left: 25%;
+}
+
+.header__name{
+    /* display: flex;
+    flex-direction: column; */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: blue;
+
+}
+.header__searchInput{
+    height: 12px;
+    padding: 10px;
+    border: 100%;
+}
+.header__searchIcon{
+    padding:5px;
+    height:22px !important;
+    background-color: coral;
+
+}
+.header__option{
+    /* display: flex;
+    flex-direction: column; */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: red
+}
+.header_link{
+    color: white;
+    text-decoration: none;
+}
+.login{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 50%;
+}
