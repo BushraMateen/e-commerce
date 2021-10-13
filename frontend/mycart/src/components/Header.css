@@ -36,14 +36,30 @@
     flex-direction: column; */
     margin-left: 10px;
     margin-right: 10px;
-    color: red
+    color: rgb(38, 0, 255)
 }
-.header_link{
+.header__link{
     color: white;
     text-decoration: none;
+    margin-left: 40%; 
 }
+
+.Checkout__link{
+    margin-left: 4%;
+}
+
+
 .login{
     display: flex;
     justify-content: flex-end;
     margin-left: 50%;
+}
+.header__optionBasket{
+    display: flex;
+    align-items: center;
+
+}
+.header__basketCount{
+    margin-left: 10px;
+    margin-right: 10px;
 }
