@@ -6,7 +6,7 @@ import json
 
 def loadfile():
 # Opening JSON file
-    f = open('product.json',encoding='utf8')
+    f = open('dataservice\product.json',encoding='utf8')
 
     # returns JSON object as
     # a dictionary
@@ -21,11 +21,10 @@ def get_product_list():
     data=loadfile()
     for i in data:
         #print(i["product_name"])
-        p1 = product(i["uniq_id"],i["product_name"],i["retail_price"],i["discounted_price"],i["image"],
-        i["description"],i["product_rating"],i["overall_rating"],i["brand"])
+        p1 = product(i["title"],i["price"],i["description"],i["category"],
+        i["image"],i["rating"]["rate"],i["rating"]["count"])
         productlist.append(p1)
     return productlist
-
 
 
     # Iterating through the json

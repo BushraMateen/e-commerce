@@ -1,0 +1,27 @@
+#homecontainer{
+
+    display: grid;
+    padding: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: 200px 200px auto;
+}
+
+
+/* .home__image {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    justify-content: flex-end;
+}
+
+li{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+
+} */
+

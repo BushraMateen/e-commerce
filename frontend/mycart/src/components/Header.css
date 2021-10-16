@@ -49,11 +49,11 @@
 }
 
 
-.login{
+/* .login{
     display: flex;
     justify-content: flex-end;
     margin-left: 50%;
-}
+} */
 .header__optionBasket{
     display: flex;
     align-items: center;

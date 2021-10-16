@@ -36,12 +36,12 @@ def add_product():
                                  
     data = get_product_list()
 
-    conn =  create_connection("localhost","product","postgres","bushra")
+    conn =  create_connection("localhost","bushradb","postgres","bushra")
     cur = conn.cursor()
 
     for d in data:
-        cur.execute("INSERT into product(uniq_id,product_name,retail_price,discounted_price,image,description,product_rating,overall_rating,brand) VALUES (%s, %s,%s,%s,%s,%s,%s,%s,%s)",
-        (d.uniq_id,d.product_name,d.retail_price,d.discounted_price,d.image,d.description,d.product_rating,d.overall_rating,d.brand))
+        cur.execute("INSERT into webapp_products(title,price,description,category,image,rate,count) VALUES (%s, %s,%s,%s,%s,%s,%s)",
+        (d.title,d.price,d.description,d.category,d.image,d.rate,d.count))
   
   
     print("List has been inserted to product table successfully...")

@@ -5,4 +5,6 @@ from webapp.models import products
 class productsSerializer(serializers.ModelSerializer):
     class Meta:
         model =  products
-        fields= ('product_name','retail_price', 'discounted_price','image','description','product_rating','overall_rating','brand')
+        fields= ('title','price', 'description','category','image','rate','count')
+
+
