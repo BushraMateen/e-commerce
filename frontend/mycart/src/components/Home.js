@@ -1,7 +1,8 @@
 import React, { useState, useEffect} from 'react';
+import FilterableProductTable from './FilterableProductTable'
 import './Home.css'
 
-function Home(){
+function Home() {
     
 const [products, setProducts] = useState([]);
 
@@ -16,9 +17,12 @@ useEffect(()=> {
 
 
 
+
 return(
     <div id="homecontainer">
-        {products.map(p => 
+
+      <FilterableProductTable product = {products}/>
+        {/* {products.map(p => 
                 <div className="productList">
                   
                     <li>{p.id}</li>
@@ -30,11 +34,24 @@ return(
                     <img 
                     src={p.image}
                     alt="" />
-                    </div>
-                </div>)}
+                    </div> 
+                </div>)}*/}
     </div>
 )
+
 }
 
-
  export default Home
+
+
+ 
+
+
+  
+  
+  
+  
+  
+ 
+  
+  

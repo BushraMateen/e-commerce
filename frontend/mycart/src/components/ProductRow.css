@@ -1,4 +1,5 @@
-#homecontainer{
+
+.ProductRow{
 
     display: grid;
     padding: 20px;
